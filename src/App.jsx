@@ -9,9 +9,7 @@ const App = () => {
     <div>
       <Header></Header>
       <Button>Sort By Date</Button>
-
       <Cart></Cart>
-      <Button>See More</Button>
     </div>
   );
 };
