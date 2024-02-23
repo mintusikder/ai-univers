@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import SingleData from "./SingleData";
 import Button from "./Button";
+import Modal from "./Modal";
 
 const Cart = () => {
   const [data, setData] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  const [uniqueid, setuniqueid] = useState(null)
 
   const handelshowAll = () => {
-    console.log("hrllo");
     setShowAll(true);
   };
 
@@ -35,6 +36,7 @@ const Cart = () => {
               <SingleData
                 key={singleData.id}
                 singleData={singleData}
+                setuniqueid={setuniqueid}
               ></SingleData>
             ))}
       </div>
@@ -43,6 +45,7 @@ const Cart = () => {
           <Button>See More</Button>
         </span>
       )}
+      <Modal></Modal>
     </>
   );
 };
