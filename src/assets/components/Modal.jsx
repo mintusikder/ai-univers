@@ -1,9 +1,9 @@
 import React from "react";
 
 const Modal = (props) => {
-  console.log(props.singleData);
-  const { image_link, description, features, tool_name } = props.singleData;
-
+  // console.log(props.singleData)
+  const { image_link, description, features, integrations } = props.singleData;
+  // console.log(integrations);
   return (
     <div>
       <input type="checkbox" id="my_modal_6" className="modal-toggle" />
@@ -22,6 +22,9 @@ const Modal = (props) => {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold">Integrations</h1>
+                  {integrations.map((inte) => (
+                    <li>{inte}</li>
+                  ))}
                 </div>
               </div>
             </div>
