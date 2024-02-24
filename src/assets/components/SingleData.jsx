@@ -4,9 +4,9 @@ import { ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
 const SingleData = (props) => {
   const { name, image, features, published_in, id } = props.singleData;
 
-  const handleId = (id) => {
-    console.log(id);
-  };
+  // const handleId = (id) => {
+  //   console.log(id);
+  // };
 
   return (
     <div>
