@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
 const SingleData = (props) => {
-  const { name, image, features, published_in, id } = props.singleData;
+  const { name, image, features, published_in, id } = props?.singleData;
 
   // const handleId = (id) => {
   //   console.log(id);
@@ -34,7 +34,7 @@ const SingleData = (props) => {
             </div>
             <div className="card-actions justify-end">
               <label
-                onClick={() => props.setuniqueid(id)}
+                onClick={() => props?.setuniqueid(id)}
                 htmlFor="my_modal_6"
                 className="btn"
               >

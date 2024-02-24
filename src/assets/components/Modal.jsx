@@ -2,7 +2,7 @@ import React from "react";
 
 const Modal = (props) => {
   // Destructure props
-  const { image_link, description, features, integrations } = props.singleData;
+  const { image_link, description, features, integrations } = props?.singleData;
 
   return (
     <div>
@@ -22,7 +22,7 @@ const Modal = (props) => {
                   {/* Features */}
                   <h1 className="text-xl font-bold">Features</h1>
                   <ul>
-                    {Object.values(features || {}).map((value, index) => (
+                    {Object.values(features || {})?.map((value, index) => (
                       <li key={index}>{value.feature_name}</li>
                     ))}
                   </ul>
@@ -33,7 +33,7 @@ const Modal = (props) => {
                   <h1 className="text-xl font-bold">Integrations</h1>
                   <ul>
                     {integrations &&
-                      integrations.map((inte, index) => (
+                      integrations?.map((inte, index) => (
                         <li key={index}>{inte}</li>
                       ))}
                   </ul>
