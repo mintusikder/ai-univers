@@ -10,23 +10,20 @@ const Modal = (props) => {
       <div className="modal" role="dialog">
         <div className="modal-box w-11/12 max-w-5xl">
           <div className="card lg:card-side bg-base-100 ">
-         
             <div className="card-body">
               <h2 className="card-title">{description}</h2>
 
               <div className="flex justify-between">
                 <div>
                   <h1 className="text-xl font-bold">Feaures</h1>
-                  {
-                    features.map(fi => <li>{fi}</li>)
-                  }
+                  {Object.values(features || {}).map((value) => (
+                    <li>{value.feature_name}</li>
+                  ))}
                 </div>
                 <div>
                   <h1 className="text-xl font-bold">Integrations</h1>
                 </div>
               </div>
-
-             
             </div>
             <figure>
               <img
@@ -41,7 +38,6 @@ const Modal = (props) => {
               Close!
             </label>
           </div>
-          
         </div>
       </div>
     </div>
